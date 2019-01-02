@@ -8,23 +8,16 @@
 <body>
 
 <div id="app">
+  <p>
+  <input type="text" v-model="message">
+  </p>
+ <p>
+  <input type="text" v-model="message">
+  </p>
 
-<p v-show="toggle">
-Hello
+  <p>
+{{message}}
 </p>
-<ul>
-<li v-for="value in object">
-    {{ value }}
-  </li>
-</ul>
-<button v-on:click="say('おはよ！！')">Say hi</button>
-  <button v-on:click="say('よろしく！！')">Say what</button>
-  <p>
-    <input type="text" v-model="message">
-  </p>
-  <p>
-    {{message}}
-  </p>
 </div>
 
 
