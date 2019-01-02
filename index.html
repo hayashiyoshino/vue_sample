@@ -17,8 +17,14 @@ Hello
     {{ value }}
   </li>
 </ul>
-
-</div>
+<button v-on:click="say('おはよ！！')">Say hi</button>
+  <button v-on:click="say('よろしく！！')">Say what</button>
+  <p>
+    <input type="text" v-model="message">
+  </p>
+  <p>
+    {{message}}
+  </p>
 </div>
 
 
