@@ -8,7 +8,12 @@
 <body>
 
 <div id="app">
-<hello-component></hello-component>
+<h2>TODO　LIST</h2>
+  <form v-on:submit.prevent>
+    <input type="text" v-model="newItem">
+    <button v-on:click="addItem">ADD</button>
+  </form>
+  <pre>{{$data}}</pre>
 </div>
 
 
