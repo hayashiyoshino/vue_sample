@@ -17,7 +17,7 @@ var app = new Vue({
       this.newItem = "";
     },
     deleteItem: function(index) {
-      alert(index  + "番のメモを削除します。よろしいですか？");
+      alert((index+1)  + "番のメモを削除します。よろしいですか？");
       this.todos.splice(index, 1);
     }
   }

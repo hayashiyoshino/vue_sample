@@ -3,29 +3,30 @@
 <head>
   <meta charset="utf-8"/>
   <title>vue_sample</title>
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <h2>TODO　LIST</h2>
+  </header>
+  <div class="wrapper">
+    <div id="app">
+      <form v-on:submit.prevent>
+        <input type="text" v-model="newItem">
+        <button v-on:click="addItem" class="addbotton">ADD</button>
+      </form>
+      <ul>
+        <li v-for="(todo, index) in todos">
+          <input type="checkbox" v-model="todo.isDone">
+          <span v-bind:class="{done: todo.isDone}">{{ todo.item }}</span>
+          <button v-on:click="deleteItem(index)">Delete</button>
+        </li>
+      </ul>
+    </div>
 
-<div id="app">
-  <h2>TODO　LIST</h2>
-  <form v-on:submit.prevent>
-    <input type="text" v-model="newItem">
-    <button v-on:click="addItem">ADD</button>
-  </form>
-  <ul>
-    <li v-for="(todo, index) in todos">
-      <input type="checkbox" v-model="todo.isDone">
-      <span v-bind:class="{done: todo.isDone}">{{ todo.item }}</span>
-      <button v-on:click="deleteItem(index)">Delete</button>
-    </li>
-  </ul>
-  <pre>{{$data}}</pre>
-  <pre>{{newItem}}</pre>
-</div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
-<script src="index.js"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
