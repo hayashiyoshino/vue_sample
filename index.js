@@ -15,6 +15,10 @@ var app = new Vue({
       };
       this.todos.push(todo);
       this.newItem = "";
+    },
+    deleteItem: function(index) {
+      alert(index  + "番のメモを削除します。よろしいですか？");
+      this.todos.splice(index, 1);
     }
   }
 })
