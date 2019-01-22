@@ -16,7 +16,7 @@
         <input type="text" v-model="newItem">
         <button v-on:click="addItem" class="addbotton">ADD</button>
       </form>
-      <ul>
+      <ul style="font-size: 24px;">
         <li v-for="(todo, index) in todos">
           <input type="checkbox" v-model="todo.isDone">
           <span v-bind:class="{done: todo.isDone}">{{ todo.item }}</span>
